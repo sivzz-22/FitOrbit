@@ -1,0 +1,130 @@
+.metrics-charts {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.metric-chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.metric-chart-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.metric-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.metric-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.35rem 0;
+}
+
+.metric-card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.metric-card-header h3 span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.metric-average {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.metric-mini-chart {
+  height: 160px;
+}
+
+.no-metrics {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
+
+.metrics-table {
+  overflow-x: auto;
+}
+
+.metrics-table h3 {
+  margin: 0 0 1rem 0;
+}
+
+.metrics-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.metrics-table th,
+.metrics-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.metrics-table th {
+  background: var(--bg-color);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.metrics-table td {
+  color: var(--text-secondary);
+}
+
+.notes-cell {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  font-size: inherit;
+}
+
+.btn-link:hover {
+  color: var(--primary-hover);
+}
+
+.btn-link-danger {
+  color: var(--error-color);
+}
+
+.btn-link-danger:hover {
+  color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .metric-chart-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-table {
+    font-size: 0.85rem;
+  }
+}
+

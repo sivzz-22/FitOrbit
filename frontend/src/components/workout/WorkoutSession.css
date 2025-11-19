@@ -1,0 +1,248 @@
+.workout-session {
+  padding: 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.session-header {
+  margin-bottom: 2rem;
+}
+
+.session-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.stopwatch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.stopwatch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--card-bg);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--primary-color);
+  box-shadow: var(--shadow-md);
+}
+
+.stopwatch-icon {
+  font-size: 1.25rem;
+}
+
+.stopwatch-time {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-variant-numeric: tabular-nums;
+  min-width: 80px;
+  text-align: center;
+}
+
+.stopwatch-control {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.btn-back {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.btn-back:hover {
+  color: var(--primary-hover);
+}
+
+.session-header h1 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.exercise-counter {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 1rem;
+}
+
+.current-set-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: 2rem;
+}
+
+.current-set-card h2 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.set-counter {
+  color: var(--text-secondary);
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+}
+
+.set-params {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.param-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.param-card label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.param-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.param-card input {
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius);
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: border-color 0.3s;
+}
+
+.param-card input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.set-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-large {
+  flex: 1;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.workout-progress {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.workout-progress h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color);
+  font-size: 1.25rem;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.progress-item {
+  padding: 1rem;
+  background: var(--bg-color);
+  border-radius: var(--radius);
+  border: 2px solid var(--border-light);
+  transition: all 0.3s;
+}
+
+.progress-item.current {
+  border-color: var(--primary-color);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.progress-item.completed {
+  border-color: var(--success-color);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.progress-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.progress-item-header span:first-child {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.current-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.completed-badge {
+  color: var(--success-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.progress-item-details {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .set-params {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .set-actions {
+    flex-direction: column;
+  }
+
+  .session-header-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stopwatch-container {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .stopwatch {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

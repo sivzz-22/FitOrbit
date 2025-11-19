@@ -1,0 +1,68 @@
+.content-management h2 {
+  margin-bottom: 1.5rem;
+}
+
+.content-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pending-content {
+  margin-top: 1rem;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+.content-info {
+  flex: 1;
+}
+
+.content-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.content-info p {
+  margin: 0.25rem 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.content-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.no-data {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .content-item {
+    flex-direction: column;
+  }
+
+  .content-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+

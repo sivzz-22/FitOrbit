@@ -1,0 +1,142 @@
+.challenge-admin-form {
+  margin-top: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.challenge-admin-item {
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+}
+
+.challenge-admin-header h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-color);
+}
+
+.challenge-admin-header p {
+  color: var(--text-secondary);
+  margin: 0 0 0.75rem 0;
+}
+
+.challenge-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.challenge-meta .badge {
+  background: var(--primary-light);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.challenge-meta small {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.challenge-leaderboard {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.challenge-leaderboard h5 {
+  margin: 0 0 1rem 0;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.leaderboard-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--card-hover);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.rank-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.leaderboard-user {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.leaderboard-user strong {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.leaderboard-user small {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.completion-time {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.empty-state {
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .leaderboard-list li {
+    flex-wrap: wrap;
+  }
+
+  .completion-time {
+    width: 100%;
+    text-align: right;
+  }
+}
+
